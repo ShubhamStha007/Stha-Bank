@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up | Shrestha Smart Bank</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --primary-color: #0f3d2e;
+        --accent-color: #35d07f;
+        --text-color: #2f3a36;
+        --light-bg: #f3fbf6;
+        --white: #ffffff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: var(--light-bg);
+        color: var(--text-color);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 1rem;
+      }
+
+      .page {
+        width: 100%;
+        max-width: 460px;
+      }
+
+      .card {
+        background: var(--white);
+        border-radius: 18px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+      }
+
+      .card-header {
+        padding: 1.5rem 1.5rem 1rem;
+        background: linear-gradient(135deg, var(--primary-color), #0d2f25);
+        color: var(--white);
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10px;
+        font-weight: 800;
+        font-size: 1.85rem;
+
+        margin-bottom: 0.5rem;
+      }
+
+      .brand img {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+      }
+
+      .card-header h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.2rem;
+      }
+
+      .card-header p {
+        opacity: 0.9;
+        font-size: 0.95rem;
+      }
+
+      form {
+        padding: 1.5rem;
+      }
+
+      label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 0.4rem;
+        font-size: 0.95rem;
+      }
+
+      .field {
+        margin-bottom: 1rem;
+      }
+
+      input {
+        width: 100%;
+        padding: 0.85rem 0.9rem;
+        border: 1px solid rgba(15, 61, 46, 0.15);
+        border-radius: 12px;
+        outline: none;
+        font-size: 1rem;
+      }
+
+      input:focus {
+        border-color: rgba(53, 208, 127, 0.8);
+        box-shadow: 0 0 0 3px rgba(53, 208, 127, 0.18);
+      }
+
+      .btn {
+        width: 100%;
+        padding: 0.95rem 1rem;
+        border: none;
+        border-radius: 50px;
+        background: var(--accent-color);
+        color: var(--primary-color);
+        font-weight: 800;
+        font-size: 1.05rem;
+        cursor: pointer;
+        transition:
+          transform 0.15s ease,
+          box-shadow 0.15s ease;
+        box-shadow: 0 10px 25px rgba(53, 208, 127, 0.25);
+      }
+
+      .btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 14px 30px rgba(53, 208, 127, 0.32);
+      }
+
+      .meta {
+        margin-top: 0.8rem;
+        font-size: 0.9rem;
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .link {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .link:hover {
+        color: var(--accent-color);
+      }
+
+      .footer-note {
+        text-align: center;
+        margin-top: 1rem;
+        font-size: 0.8rem;
+        color: rgba(47, 58, 54, 0.7);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page">
+      <div class="card">
+        <div class="card-header">
+          <div class="brand">
+            <img
+              src="stha.png"
+              alt="Shrestha logo"
+              style="background-color: #f3fbf6; border-radius: 50%"
+            />
+            <span>Shrestha Smart Bank</span>
+          </div>
+          <div style="text-align: center">
+            <h1>Sign Up</h1>
+            <p>Create your account in minutes.</p>
+          </div>
+        </div>
+
+        <form
+          onsubmit="
+            event.preventDefault();
+            alert(
+              'Demo signup page. Connect to backend for real registration.',
+            );
+          "
+        >
+          <div class="field">
+            <label for="name">Full Name</label>
+            <input
+              id="name"
+              type="text"
+              placeholder="Enter your full name"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label for="email">Email / Username</label>
+            <input
+              id="email"
+              type="text"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label for="password">Password</label>
+            <input
+              id="password"
+              type="password"
+              placeholder="Create a password"
+              required
+            />
+          </div>
+
+          <button class="btn" type="submit">Create Account</button>
+
+          <div class="meta">
+            <a class="link" href="login.html">Already have an account?</a>
+            <a
+              class="link"
+              href="#"
+              onclick="
+                alert('Demo form.');
+                return false;
+              "
+              >Need help?</a
+            >
+          </div>
+
+          <div class="footer-note">
+            By continuing, you agree to our Terms & Privacy Policy.
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
